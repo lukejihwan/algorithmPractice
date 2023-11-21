@@ -21,12 +21,12 @@ public class Q3052 {
         }
 
         //2번 방법
-        /*HashSet<Integer> remainders = new HashSet<>();
+        HashSet<Integer> remainders = new HashSet<>();
         for(int i = 0; i < 10; i++){
             int number = Integer.parseInt(br.readLine());
             remainders.add(number % 42);
         }
-        bw.write(remainders.size() + "\n");*/
+        bw.write(remainders.size() + "\n");
 
         bw.write(count + "\n");
         br.close();
