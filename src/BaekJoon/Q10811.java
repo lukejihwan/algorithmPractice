@@ -21,6 +21,7 @@ public class Q10811 {
             st = new StringTokenizer(br.readLine());
             int order1 = Integer.parseInt(st.nextToken()) - 1;
             int order2 = Integer.parseInt(st.nextToken()) - 1;
+            int nums = 0;
 
             while (order1 < order2) {
                 int temp = arr[order1];
