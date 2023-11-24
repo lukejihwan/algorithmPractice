@@ -30,6 +30,7 @@ public class Q10811 {
             }
 
         }
+        String two = "0g";
         String ret = "";
         for (int j = 0; j < arr.length; j++) {
             ret += arr[j] + " ";
