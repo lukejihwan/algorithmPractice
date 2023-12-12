@@ -12,24 +12,52 @@ public class Q2941 {
         String str = br.readLine();
         int count = 0;
 
-        for(int i = 0; i < stArray.length; i++){
+        for(int i = 0; i < str.length(); i++){
+            char ch = str.charAt(i);
 
-            int index = str.indexOf(stArray[i]);
-            while(index != -1){
-                String a = str.substring(0, index);
-                String b = str.substring(index + stArray[i].length());
-                str = a + b;
-                count++;
-                index = str.indexOf(stArray[i]);
-                System.out.println(a);
-                System.out.println(b);
-
+            if(ch == 'c'){
+                if(str.charAt(i + 1) == '='){
+                    i++;
+                }
+                else if(str.charAt(i + 1) == '-'){
+                    i++;
+                }
+            }
+            else if(ch == 'd'){
+                if(str.charAt(i + 1) == 'z'){
+                    if(str.charAt(i + 2) == '='){
+                        i += 2;
+                    }
+                }
+                else if(str.charAt(i + 1) == '-'){
+                    i++;
+                }
+            }
+            else if(ch == 'l') {
+                if (str.charAt(i + 1) == 'j') {
+                    i++;
+                }
+            }
+            else if(ch == 'n'){
+                if(str.charAt(i + 1) == 'j'){
+                    i++;
+                }
+            }
+            else if (ch == 's') {
+               if(str.charAt(i + 1) == '='){
+                   i++;
+               }
+            }
+            else if(ch == 'z'){
+                if(str.charAt(i + 1) == '='){
+                    i++;
+                }
             }
 
+            count++;
         }
 
-        int restAlphabet = str.length();
-        bw.write(count + restAlphabet + "\n");
+        bw.write(count + "\n");
         br.close();
         bw.close();
 
