@@ -6,7 +6,8 @@ import java.util.Scanner;
 public class Q25206 {
     public static void main(String[] args) throws IOException {
 
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         double result = 0, credit_sum = 0;
         char c;
@@ -15,7 +16,7 @@ public class Q25206 {
             double credit = 0;
             double grade = 0;
 
-            String str_arr[] = sc.nextLine().split(" ");
+            String str_arr[] = br.readLine().split(" ");
             credit += Double.parseDouble(str_arr[1]);
             c = str_arr[2].charAt(0);
 
@@ -47,10 +48,10 @@ public class Q25206 {
             credit_sum += credit;
             result += credit * grade;
         }
-        sc.close();
+        br.close();
 
-        System.out.println(result/credit_sum);
-
+        bw.write(result/credit_sum + "\n");
+        bw.close();
 
     }
 }
