@@ -1,27 +1,55 @@
 package BaekJoon;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.util.HashMap;
+import java.io.*;
+import java.util.Scanner;
 
 public class Q25206 {
-    public static void main(String[] args) {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+    public static void main(String[] args) throws IOException {
 
-        HashMap<String,Double> map = new HashMap<>();
-        map.put("A+", 4.5);
-        map.put("A0", 4.0);
-        map.put("B+", 3.5);
-        map.put("B0", 3.0);
-        map.put("C+", 2.5);
-        map.put("C0", 2.0);
-        map.put("D+", 1.5);
-        map.put("D0", 1.0);
-        map.put("F", 0.0);
+        Scanner sc = new Scanner(System.in);
 
+        double result = 0, credit_sum = 0;
+        char c;
+
+        for(int i = 0; i < 20; i++) {
+            double credit = 0;
+            double grade = 0;
+
+            String str_arr[] = sc.nextLine().split(" ");
+            credit += Double.parseDouble(str_arr[1]);
+            c = str_arr[2].charAt(0);
+
+            switch(c) {
+                case 'A':
+                    if(str_arr[2].charAt(1) == '+') grade += 4.5;
+                    else grade += 4.0;
+                    break;
+                case 'B':
+                    if(str_arr[2].charAt(1) == '+') grade += 3.5;
+                    else grade += 3.0;
+                    break;
+                case 'C':
+                    if(str_arr[2].charAt(1) == '+') grade += 2.5;
+                    else grade += 2.0;
+                    break;
+                case 'D':
+                    if(str_arr[2].charAt(1) == '+') grade += 1.5;
+                    else grade += 1.0;
+                    break;
+                case 'F':
+                    grade += 0;
+                    break;
+                case 'P':
+                    grade += 0;
+                    credit = 0;
+                    break;
+            }
+            credit_sum += credit;
+            result += credit * grade;
+        }
+        sc.close();
+
+        System.out.println(result/credit_sum);
 
 
     }
