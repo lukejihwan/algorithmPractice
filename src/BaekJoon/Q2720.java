@@ -34,7 +34,6 @@ public class Q2720 {
             }
             bw.write(quarter + " " + dime + " " + nickel + " " + penny + "\n");
         }
-        System.out.println(124/25);
 
         br.close();
         bw.close();
