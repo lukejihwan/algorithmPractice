@@ -15,8 +15,7 @@ public class Q11653 {
 
             //구한 소수를 작은 수부터 나누어 나누어 떨어지면 출력한다
             while(divideNum <= N){
-                int num = N % divideNum;
-                if(num == 0){
+                if(N % divideNum == 0){
                     N = N / divideNum;
                     bw.write(divideNum + "\n");
                 }else{
