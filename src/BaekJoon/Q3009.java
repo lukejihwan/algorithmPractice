@@ -11,7 +11,7 @@ public class Q3009 {
         //3점중에, 같은 x가 2개, 같은 y가 2개이다.
         //나머지, x와 y가 곧 나머지 점이다.
 
-        StringTokenizer st = null;
+        StringTokenizer st;
         String[] x = new String[3];
         String[] y = new String[3];
 
