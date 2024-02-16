@@ -9,22 +9,30 @@ public class Q24267 {
 
         int N = Integer.parseInt(br.readLine());
 
-        // 3 -> 1, 1, 1 = 1
-        // 4 -> 2, 2!, 2! = 4 + 1 = 5
-        // 5 -> 3, 3!, 3! = 9 + 4 + 1 = 14
-        // 6 -> = 16 + 9 + 4 + 1 = 30
-        // 7 -> 5, 5, 5 = 25 + 16
-        long rep = N * 5;
-        //bw.write(rep + "\n");
-        //bw.write(3 + "");
+        // 7로 해석해보자
+        // i = 1 일 때 5 + 4 + 3 + 2 + 1 = 15
+        // i = 2 일 때 4 + 3 + 2 + 1 = 10
+        // i = 3 일 때 3 + 2 + 1 = 6
+        // i = 4 일 때 2 + 1 = 3
+        // i = 5 일 때 1 = 1
+        // 총 35 회
+        
+        //7 -> 35회, 6 -> 20회, 5 -> 10회, 4 -> 4회, 3 -> 1회
+        long sum = 0;
+        long num = 0;
+        for(int i = 1; i <= N - 2; i++){
+            num += i;
+            sum += num;
+        }
 
-        int num = MenOfPassion(7);
-        System.out.println(num);
+        bw.write(sum + "\n");
+        bw.write(3 + "");
 
         br.close();
         bw.close();
     }
 
+    // 디버깅용
     public static int MenOfPassion(int n) {
         int sum = 0;
         for (int i = 1; i <= n - 2; i++) {
