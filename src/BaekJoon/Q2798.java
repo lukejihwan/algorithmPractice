@@ -55,12 +55,9 @@ public class Q2798 {
             }
         }
 
-
         bw.write(goalNum - count + "\n");
         br.close();
         bw.close();
-
-
 
     }
 }
