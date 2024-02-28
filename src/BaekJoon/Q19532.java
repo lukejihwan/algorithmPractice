@@ -22,12 +22,19 @@ public class Q19532 {
         //x에 -999 부터 999까지 대입하면서 y가 정수로 출력되는 경우
 
         //x와 y를 출력한다.
-        // 두 방정식을 더한 후, x 를 구합니다.
-        int x = (c * e - b * f) / (a * e - b * d);
-        // 두 방정식 중 하나를 선택하여 y 를 구합니다.
-        int y = (c - a * x) / b;
+        int answerX = 0;
+        int answerY = 0;
+        for(int i = -999; i < 1000; i++){
+            for(int j = -999; j < 1000; j++){
+                if((a * i + b * j == c) && (d * i + e * j == f)){
+                    answerX = i;
+                    answerY = j;
+                    bw.write(answerX + " " + answerY + "\n");
+                    break;
+                }
+            }
+        }
 
-        bw.write(x + " " + y + "\n");
         br.close();
         bw.close();
     }
