@@ -28,18 +28,26 @@ public class Q11047 {
         for(int i = 0; i < N; i++){
             array[i] = Integer.parseInt(br.readLine());
         }
-
+        /* 1번 안
         int count = 0;
         for(int i = N - 1; i >= 0; i--){
             int rest = K - array[i];
             if(rest >= 0){
-                int quotient = K / array[i];
-                count += quotient;
-                K = K - array[i] * quotient;
+                int mok = K / array[i];
+                count += mok;
+                K = K - array[i] * mok;
             }
-
             if(K == 0) break;
+        }
+        * */
 
+        //2번안 (코드 리팩토링 후)
+        int count = 0;
+        for(int i = N - 1; i >= 0; i--){
+            if(K > 0){
+                count += K / array[i];
+                K = K % array[i];
+            }
         }
 
         bw.write(count + "\n");
