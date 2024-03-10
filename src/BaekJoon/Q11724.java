@@ -11,10 +11,6 @@ public class Q11724 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        // 1. 첫번째 줄의 첫째는 정점의 갯수를 말하고, 첫번째 줄의 둘째는 간선의 갯수를 나타낸다.
-
-        // 2.
-
         StringTokenizer st = new StringTokenizer(br.readLine());
 
         int N = Integer.parseInt(st.nextToken());
@@ -26,6 +22,7 @@ public class Q11724 {
         for(int i = 1; i < N + 1; i++){
             A[i] = new ArrayList<Integer>();
         }
+
         for(int i = 0; i < M; i++){
             st = new StringTokenizer(br.readLine());
             int s = Integer.parseInt(st.nextToken());
@@ -33,8 +30,10 @@ public class Q11724 {
             A[s].add(e);
             A[e].add(s);
         }
+
         int count = 0;
-        for(int i = 0; i < N; i++){
+
+        for(int i = 1; i < N; i++){
             if(!visited[i]){
                 count++;
                 DFS(i);
