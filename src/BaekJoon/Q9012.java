@@ -1,12 +1,10 @@
 package BaekJoon;
 
 import java.io.*;
-import java.util.LinkedList;
 import java.util.Stack;
 
 public class Q9012 {
     static int T;
-    static String[][] strArr;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -19,18 +17,15 @@ public class Q9012 {
         for(int i = 0; i < T; i++){
             Stack<String> str = new Stack<String>();
             String line = br.readLine();
-            System.out.println(line);
             for(int j = 0; j < line.length(); j++){
-                strArr[i][j] = line.substring(j, j + 1);
-                System.out.println(strArr[0][0]);
-                if(strArr[i][j].equals(")") && str.peek().equals("(")){
+                if(line.substring(j, j + 1).equals(")") && !str.empty() && str.peek().equals("(")){
                     str.pop();
                 }else {
-                    str.add(strArr[i][j]);
+                    str.add(line.substring(j, j + 1));
                 }
             }
 
-            if(str.empty() == true){
+            if(str.empty()){
                 bw.write("YES" + "\n");
             }else{
                 bw.write("NO" + "\n");
