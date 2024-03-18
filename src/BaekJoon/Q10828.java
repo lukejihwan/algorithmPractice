@@ -20,7 +20,7 @@ public class Q10828 {
             if (method.equals("push")){
                 stack.add(Integer.parseInt(st.nextToken()));
             } else if (method.equals("top")) {
-                if(stack.size() == 0){
+                if(stack.isEmpty()){
                     bw.write(-1 + "\n");
                 }else {
                     bw.write(stack.peek() + "\n");
@@ -28,13 +28,13 @@ public class Q10828 {
             } else if (method.equals("size")) {
                 bw.write(stack.size() + "\n");
             } else if (method.equals("empty")) {
-                if(stack.size() == 0){
+                if(stack.isEmpty()){
                     bw.write(1 + "\n");
                 }else {
                     bw.write(0 + "\n");
                 }
             } else if (method.equals("pop")) {
-                if(stack.size() == 0){
+                if(stack.isEmpty()){
                     bw.write(-1 + "\n");
                 }else{
                     bw.write(stack.pop() + "\n");
