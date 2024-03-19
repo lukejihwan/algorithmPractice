@@ -9,9 +9,7 @@ public class Q1874 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
-        StringBuilder sb = new StringBuilder();	// 출력할 결과물 저장
-
+        StringBuilder sb = new StringBuilder();
         int N = Integer.parseInt(br.readLine());
 
         int start = 0;
@@ -21,17 +19,16 @@ public class Q1874 {
             int value = Integer.parseInt(br.readLine());
 
             if(value > start) {
-                // start + 1부터 입력받은 value 까지 push를 한다.
                 for(int i = start + 1; i <= value; i++) {
                     stack.push(i);
                     sb.append('+').append('\n');
                 }
-                start = value; 	// 다음 push 할 때의 오름차순을 유지하기 위한 변수 초기화
+                start = value;
             } else if (stack.peek() != value) {
                 bw.write("NO" + "\n");
                 br.close();
                 bw.close();
-                return;		// 또는 System.exit(0); 으로 대체해도 됨.
+                return;
             }
 
             stack.pop();
