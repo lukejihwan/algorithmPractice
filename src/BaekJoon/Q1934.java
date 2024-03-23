@@ -7,7 +7,6 @@ import java.util.StringTokenizer;
 
 public class Q1934 {
     public static void main(String[] args) throws IOException {
-
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(br.readLine());
@@ -31,14 +30,10 @@ public class Q1934 {
 
     }
 
-
-    // 최대공약수 반복문 방식
     public static int gcd(int a, int b) {
 
         while (b != 0) {
-            int r = a % b; // 나머지를 구해준다.
-
-            // GCD(a, b) = GCD(b, r)이므로 변환한다.
+            int r = a % b;
             a = b;
             b = r;
         }
