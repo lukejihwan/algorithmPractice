@@ -56,6 +56,7 @@ public class Q10845 {
                     }else{
                         bw.write(lastValue + "\n");
                     }
+                    break;
             }
         }
 
