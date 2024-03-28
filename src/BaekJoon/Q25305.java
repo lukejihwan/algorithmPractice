@@ -23,6 +23,9 @@ public class Q25305 {
 
         //정렬
         Arrays.sort(arr, Collections.reverseOrder());
+        //int와 Integer의 차이는 primitive type과 wrapper클래스의 차이이다.
+        //int -> Integer, Integer -> int로 변환이 가능하고,
+        //Integer는 클래스로써 메서드를 사용할 수 있다.
 
         bw.write(arr[K - 1] + "\n");
         br.close();
