@@ -29,6 +29,10 @@ public class Q11650 {
         Arrays.sort(arr, new Comparator<int[]>() {
             @Override
             public int compare(int[] o1, int[] o2) {
+                // o1[0]이 o2[0]과 같지 않으면
+                // o1[0], o2[0]를 뺏을 때 양수가 반환되면 전자가 반환, 음수는 후자 반환
+                // o1[0]이 o2[0]과 같으면
+                // o1[1], o2[1]을 뺏을 때 양수가 반환되면 전자가 반환, 음수는 후자 반환
                 return o1[0]!=o2[0] ? o1[0]-o2[0] : o1[1]-o2[1];
             }
         });
