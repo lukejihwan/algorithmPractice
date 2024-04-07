@@ -34,6 +34,27 @@ public class Q1_04 {
         return answer;
     }
 
+    private ArrayList<String> solution3(int N, ArrayList<String> list){
+        ArrayList<String> answer = new ArrayList<>();
+
+        for(String str : list){
+            char[] charArr = str.toCharArray();
+            int lt = 0, rt = charArr.length - 1;
+
+            while (lt < rt){
+                char first = charArr[lt];
+                char last = charArr[rt];
+                charArr[lt] = last;
+                charArr[rt] = first;
+                lt++;
+                rt--;
+            }
+            answer.add(String.valueOf(charArr));
+        }
+
+        return answer;
+    }
+
 
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
@@ -48,10 +69,13 @@ public class Q1_04 {
             list.add(in.next());
         }
         ArrayList<String> answer2 = solution.solution2(N, list);
+        ArrayList<String> answer3 = solution.solution3(N, list);
         for(String str : answer2){
             System.out.println(str);
         }
-
+        for(String str : answer3){
+            System.out.println(str);
+        }
         return ;
     }
 }
