@@ -4,17 +4,28 @@ import java.util.Scanner;
 public class Q1_05 {
     public static void main(String[] args) {
 
-        Scanner in=new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         String str = in.next();
 
         char[] charArr = str.toCharArray();
+        int lt = 0;
+        int rt = str.length() - 1;
 
-        for(int i = 0; i < str.length(); i++){
-            char N = charArr[i];
-            if((N >= 65 && N <= 90) || (N >= 97 && N <= 122)){
-                char temp = charArr[i];
-                charArr[i] = charArr[str.length() - i - 1];
-                charArr[str.length() - i - 1] = temp;
+        while(lt < rt){
+            char first = charArr[lt];
+            char second = charArr[rt];
+
+            if((first >= 65 && first <= 90) || (first >= 97 && first <= 122)){
+                if((second >= 65 && second <= 90) || (second >= 97 && second <= 122)){
+                    charArr[rt] = first;
+                    charArr[lt] = second;
+                    lt++;
+                    rt--;
+                }else{
+                    rt--;
+                }
+            }else{
+                lt++;
             }
         }
 
