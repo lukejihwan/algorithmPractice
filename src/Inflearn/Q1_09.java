@@ -3,6 +3,9 @@ package Inflearn;
 import java.util.Scanner;
 
 public class Q1_09 {
+    /*
+    * 배운내용 : 문자형 숫자의 ASCII코드 는 48부터 57까지이다.
+    * */
 
     protected int solution1(String str){
         String answer = "";
