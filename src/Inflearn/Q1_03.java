@@ -23,6 +23,7 @@ public class Q1_03 {
     public String solution2(String str){
         String answer = "";
         int size = Integer.MIN_VALUE;
+        int max = Integer.MAX_VALUE;
 
         String[] strArr = str.split(" ");
         for(String N : strArr){
