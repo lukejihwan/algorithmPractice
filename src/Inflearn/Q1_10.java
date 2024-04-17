@@ -8,32 +8,32 @@ public class Q1_10 {
         String str = in.next();
         char N = in.next().charAt(0);
 
-        char[] charArr = str.toCharArray();
-
         int[] indexArr = new int[str.length()];
 
-        int count = 0;
-        String answer = "";
-        for(int i = 0; i < charArr.length; i++){
-            if(charArr[i] == N){
+        int count = 1000;
+        for(int i = 0; i < str.length(); i++){
+            if(str.charAt(i) == N){
                 indexArr[i] = 0;
                 count = 0;
             }else{
                 count++;
                 indexArr[i] = count;
             }
+        }
 
-            /*if(i == charArr.length - 1){
-                answer += indexArr[i];
+        count = 1000;
+        for(int i = str.length() - 1; i >= 0; i--){
+            if(str.charAt(i) == N){
+                count = 0;
             }else{
-                answer += indexArr[i] + " ";
-            }*/
+                count++;
+                indexArr[i] = Math.min(indexArr[i], count);
+            }
         }
 
-        for(int i = charArr.length - 1; i >= 0; i--){
+        for(int a : indexArr){
+            System.out.print(a + " ");
         }
-
-        System.out.println(answer);
 
     }
 }
