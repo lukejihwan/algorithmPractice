@@ -34,11 +34,9 @@ public class Q1_11 {
         for(int i = 0; i < str.length() - 1; i++){
             if(str.charAt(i) == str.charAt(i + 1)){
                 count++;
-            }else if(count > 1){
-                answer += String.valueOf(str.charAt(i)) + count;
-                count = 1;
             }else{
                 answer += String.valueOf(str.charAt(i));
+                if(count > 1)answer += count;
                 count = 1;
             }
         }
