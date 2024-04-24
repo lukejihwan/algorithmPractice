@@ -1,8 +1,52 @@
 package Inflearn;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Q2_03 {
+
+    private static ArrayList<String> solution1(int N, int[] aArr, int[] bArr){
+        ArrayList<String> list = new ArrayList<>();
+
+        for(int i = 0; i < N; i++){
+            int H = aArr[i];
+            int K = bArr[i];
+            if(H == 1 && K ==2){
+                list.add("B");
+            }else if(H == 1 && K == 3){
+                list.add("A");
+            }else if(H == 2 && K == 1){
+                list.add("A");
+            }else if(H == 2 && K == 3){
+                list.add("B");
+            }else if(H == 3 && K == 1){
+                list.add("B");
+            }else if(H == 3 && K == 2){
+                list.add("A");
+            }else{
+                list.add("D");
+            }
+        }
+
+        return list;
+    }
+
+    private static String solution2(int N, int[] aArr, int[] bArr){
+        String answer = "";
+
+        for(int i = 0; i < N; i++){
+            int K = aArr[i];
+            int H = bArr[i];
+            if(K == H) answer += "D";
+            else if (K == 1 && H == 3) answer += "A";
+            else if (K == 2 && H == 1) answer += "A";
+            else if (K == 3 && H == 2) answer += "A";
+            else answer += "B";
+        }
+
+        return answer;
+    }
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int count = in.nextInt();
@@ -20,25 +64,12 @@ public class Q2_03 {
         for(int i = 0; i < count; i++){
             bArr[i] = in.nextInt();
         }
-
-        for(int i = 0; i < count; i++){
-            int N = aArr[i];
-            int K = bArr[i];
-            if(N == 1 && K ==2){
-                System.out.println("B");
-            }else if(N == 1 && K == 3){
-                System.out.println("A");
-            }else if(N == 2 && K == 1){
-                System.out.println("A");
-            }else if(N == 2 && K == 3){
-                System.out.println("B");
-            }else if(N == 3 && K == 1){
-                System.out.println("B");
-            }else if(N == 3 && K == 2){
-                System.out.println("A");
-            }else{
-                System.out.println("D");
-            }
+        for(String N : solution1(count, aArr, bArr)){
+            System.out.println(N);
         }
+        for(char N : solution2(count, aArr, bArr).toCharArray())System.out.println(N);
+
+
+
     }
 }
