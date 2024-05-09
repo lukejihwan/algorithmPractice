@@ -25,6 +25,7 @@ public class Q3_04 {
             sum -= arr[startIndex++];
             if(sum == M)count++;
         }
+        System.out.println();
 
         return count;
     }
