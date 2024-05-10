@@ -30,7 +30,18 @@ public class Q3_04 {
     }
 
     private static int solution2(int[] arr, int N, int M){
-        int answer = 0;
+        int answer = 0, sum = 0, lt = 0;
+
+        // 로직이 수행될 때의 순서를 세심하게 볼 필요가 있다.
+        // 어떤 것을 먼저 수행하고 나중에 수행할지 flow에 맞게 짜자.
+        for(int rt = 0; rt < N; rt++){
+            sum += arr[rt];
+            if(sum == M)answer++;
+            while(sum >= M){
+                sum -= arr[lt++];
+                if(sum == M)answer++;
+            }
+        }
 
         return answer;
     }
