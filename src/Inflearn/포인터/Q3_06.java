@@ -3,6 +3,7 @@ package Inflearn.포인터;
 import java.util.Scanner;
 
 public class Q3_06 {
+    private static int solution1(){}
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int N = in.nextInt();
