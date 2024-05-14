@@ -32,7 +32,7 @@ public class Q3_06 {
             }
 
         }
-
+        System.out.println();
         System.out.println(max);
     }
 }
