@@ -61,7 +61,7 @@ public class Q3_06 {
             arr[i] = in.nextInt();
         }
 
-        //System.out.println(solution1(arr, N, K));
+        System.out.println(solution1(arr, N, K));
         System.out.println(solution2(arr, N, K));
 
     }
