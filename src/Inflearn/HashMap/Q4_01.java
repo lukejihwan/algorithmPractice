@@ -5,13 +5,8 @@ import java.util.Scanner;
 
 public class Q4_01 {
     private static char[] charArr = {'A', 'B', 'C', 'D', 'E'};
-    public static void main(String[] args){
-        Scanner in = new Scanner(System.in);
 
-        //hashMap을 사용해서 문제를 풀어야 함.
-        int N = in.nextInt();
-        String str = in.next();
-
+    private static char solution1(int N, String str){
         HashMap<Character, Integer> map = new HashMap<Character, Integer>();
         for(int i = 0; i < charArr.length; i++){
             map.put(charArr[i], 0);
@@ -32,7 +27,35 @@ public class Q4_01 {
             }
         }
 
-        System.out.println("안녀하세요");
-        System.out.println(selected);
+        return selected;
+    }
+
+    private static char solution2(int N, String str){
+        HashMap<Character, Integer> map = new HashMap<>();
+        for(int i = 0; i < str.length(); i++){
+            map.put(str.charAt(i), map.getOrDefault(str.charAt(i), 0) + 1);
+        }
+
+        int max = 0;
+        Character result = ' ';
+        for(Character one : map.keySet()){
+            int num = map.get(one);
+            if(max < num){
+                max = num;
+                result = one;
+            }
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+
+        int N = in.nextInt();
+        String str = in.next();
+
+        System.out.println(solution1(N, str));
+        System.out.println(solution2(N, str));
     }
 }
