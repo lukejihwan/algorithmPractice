@@ -38,7 +38,7 @@ public class Q4_01 {
 
         int max = 0;
         Character result = ' ';
-        for(Character one : map.keySet()){
+        for(char one : map.keySet()){
             int num = map.get(one);
             if(max < num){
                 max = num;
@@ -57,5 +57,6 @@ public class Q4_01 {
 
         System.out.println(solution1(N, str));
         System.out.println(solution2(N, str));
+
     }
 }
