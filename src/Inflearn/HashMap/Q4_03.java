@@ -1,7 +1,6 @@
 package Inflearn.HashMap;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Scanner;
 
 public class Q4_03 {
@@ -21,7 +20,7 @@ public class Q4_03 {
         }
         System.out.print(hashMap.size() + " ");
 
-        int rt = K, lt = 0, count = 0;
+        int rt = K, lt = 0;
         while(rt < N){
             if(hashMap.get(arr[lt]) == 1){
                 hashMap.remove(arr[lt]);
