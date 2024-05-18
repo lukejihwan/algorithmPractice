@@ -3,16 +3,7 @@ package Inflearn.HashMap;
 import java.util.*;
 
 public class Q4_05 {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int N = in.nextInt();
-        int K = in.nextInt();
-
-        int[] arr = new int[N];
-        for(int i = 0; i < N; i++){
-            arr[i] = in.nextInt();
-        }
-
+    private static int solution1(int[] arr, int N, int K){
         // 모든 숫자들을 다 더해서 ArrayList에 넣은 후 정렬하고, Set을 사용한다.
         int lt = 0, mt = 1, rt = 2;
         HashSet<Integer> hashSet = new HashSet<>();
@@ -41,10 +32,43 @@ public class Q4_05 {
 
         Arrays.sort(answer);
         if(answer.length - K < 0){
-            System.out.println(-1);
+            return -1;
         }else{
-            System.out.println(answer[answer.length - K]);
+            return answer[answer.length - K];
         }
+    }
+
+    private static int solution2(int[] arr, int N, int K){
+        TreeSet<Integer> treeSet = new TreeSet<>(Collections.reverseOrder());
+
+        for(int lt = 0; lt < N; lt++){
+            for(int mt = lt + 1; mt < N; mt++){
+                for(int rt = mt + 1; rt < N; rt++){
+                    treeSet.add(arr[lt] + arr[mt] + arr[rt]);
+                }
+            }
+        }
+        int count = 1;
+        for(int x : treeSet){
+            if(K == count) return x;
+            count++;
+        }
+
+        return -1;
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int N = in.nextInt();
+        int K = in.nextInt();
+
+        int[] arr = new int[N];
+        for(int i = 0; i < N; i++){
+            arr[i] = in.nextInt();
+        }
+
+        System.out.println(solution1(arr, N, K));
+        System.out.println(solution2(arr, N, K));
 
     }
 }
