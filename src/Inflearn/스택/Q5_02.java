@@ -4,9 +4,8 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class Q5_02 {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        String str = in.next();
+
+    private static String solution1(String str){
         Stack<Character> stack = new Stack<>();
 
         //stack이 비어있을 때 문자열을 String에 더한다.
@@ -21,6 +20,29 @@ public class Q5_02 {
             }
         }
 
-        System.out.println(answer);
+        return answer;
+    }
+
+    private static String solution2(String str){
+        Stack<Character> stack = new Stack<>();
+
+        for(char N : str.toCharArray()){
+            if(N == ')'){
+                while(stack.pop() != '(');
+            }else{
+                stack.push(N);
+            }
+        }
+        String answer = "";
+        for(int i = 0; i < stack.size(); i++) answer += stack.get(i);
+
+        return answer;
+    }
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String str = in.next();
+
+        System.out.println(solution1(str));
+        System.out.println(solution2(str));
     }
 }
