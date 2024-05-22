@@ -64,6 +64,11 @@ public class Q5_03 {
                 board2[i][j] = board1[i][j] = in.nextInt();
             }
         }
+        Stack<Integer> stack = new Stack<>();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+        stack.push(4);
 
         int K = in.nextInt();
         int[] moves = new int[K];
