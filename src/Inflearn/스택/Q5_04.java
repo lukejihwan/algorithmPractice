@@ -1,4 +1,4 @@
-package Inflearn.postfix;
+package Inflearn.스택;
 
 import java.util.Scanner;
 import java.util.Stack;
