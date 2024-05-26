@@ -5,11 +5,7 @@ import java.util.Queue;
 import java.util.Scanner;
 
 public class Q5_07 {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        String str1 = in.next();
-        String str2 = in.next();
-
+    private static String solution1(String str1, String str2){
         Queue<Character> q1 = new LinkedList<>();
         for(char n : str1.toCharArray()){
             q1.offer(n);
@@ -28,11 +24,34 @@ public class Q5_07 {
         }
 
         if(q1.isEmpty()){
-            System.out.println("YES");
+            return "YES";
         }else{
-            System.out.println("NO");
+            return "NO";
+        }
+    }
+
+    private static String solution2(String str1, String str2){
+        Queue<Character> q = new LinkedList<>();
+        String answer = "YES";
+
+        for(char n : str1.toCharArray()) q.offer(n);
+        for(char n : str2.toCharArray()){
+            if(q.contains(n)){
+                if(n != q.poll()) return "NO";
+            }
         }
 
-        return ;
+        if(!q.isEmpty()) return "NO";
+
+        return answer;
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String str1 = in.next();
+        String str2 = in.next();
+
+        System.out.println(solution1(str1, str2));
+        System.out.println(solution2(str1, str2));
     }
 }
