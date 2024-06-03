@@ -12,6 +12,7 @@ public class Q6_06 {
             arr[i] = in.nextInt();
         }
 
+        // 아래 케이스 외에 철수가 주변아이들과 키가 같은 경우도 존재하므로, 추가해야함
         boolean firstPrinted = false;
         for(int i = 0; i < N - 1; i++){
             if(arr[i] > arr[i + 1] && !firstPrinted){
