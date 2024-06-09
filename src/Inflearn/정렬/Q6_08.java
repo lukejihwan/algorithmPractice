@@ -25,9 +25,9 @@ public class Q6_08 {
                 System.out.println(mid + 1);
                 break;
             }else if(arr[mid] < K){
-                start = mid;
+                start = mid + 1;
             }else if(arr[mid] > K){
-                end = mid;
+                end = mid - 1;
             }
         }
 
