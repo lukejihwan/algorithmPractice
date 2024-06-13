@@ -1,5 +1,6 @@
 package Inflearn.정렬;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Q6_09 {
@@ -12,5 +13,10 @@ public class Q6_09 {
         for(int i = 0; i < N; i++){
             arr[i] = sc.nextInt();
         }
+    }
+
+    private ArrayList<Integer> sort(){
+
+        return null;
     }
 }
