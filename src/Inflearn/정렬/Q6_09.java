@@ -17,6 +17,9 @@ public class Q6_09 {
 
     private ArrayList<Integer> sort(){
 
+        // 결정 알고리즘 사용
+        int a = 10;
+        int b = 100;
         return null;
     }
 }
