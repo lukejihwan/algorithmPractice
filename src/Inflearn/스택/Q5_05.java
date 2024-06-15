@@ -22,7 +22,6 @@ public class Q5_05 {
                 stack.pop();
                 answer += stack.size();
             }
-            System.out.print();
             last = n;
         }
 
