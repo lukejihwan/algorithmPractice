@@ -37,9 +37,9 @@ public class Q6_10 {
             int mid = (lt + rt) / 2;
             if(count(arr, mid) >= K){
                 answer = mid;
-                rt = mid - 1;
-            }else{
                 lt = mid + 1;
+            }else{
+                rt = mid - 1;
             }
         }
 
