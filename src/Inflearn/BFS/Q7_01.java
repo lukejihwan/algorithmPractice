@@ -43,4 +43,9 @@ public class Q7_01 {
     private static int DBF(){
         return 0;
     }
+
+    private static int count(){
+
+        return 1;
+    }
 }
