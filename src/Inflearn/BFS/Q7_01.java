@@ -45,6 +45,7 @@ public class Q7_01 {
     }
 
     private static int count(){
+        System.out.println();
 
         return 1;
     }
