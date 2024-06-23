@@ -27,6 +27,15 @@ public class Q7_01 {
         return N - K;
     }
 
+    private static void count(int N){
+        if(N == 0){
+            return;
+        }else{
+            count(N - 1);
+            System.out.println(N + " ");
+        }
+    }
+
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);
         int N = in.nextInt();
@@ -40,13 +49,4 @@ public class Q7_01 {
 
     }
 
-    private static int DBF(){
-        return 0;
-    }
-
-    private static int count(){
-        System.out.println();
-
-        return 1;
-    }
 }
