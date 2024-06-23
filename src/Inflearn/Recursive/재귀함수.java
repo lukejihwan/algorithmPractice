@@ -8,7 +8,7 @@ public class 재귀함수 {
             return;
         }else{
             count(N - 1);
-            System.out.println(N + " ");
+            System.out.print(N + " ");
         }
     }
     public static void main(String[] args) {
