@@ -40,6 +40,7 @@ public class Q7_01 {
         Scanner in = new Scanner(System.in);
         int N = in.nextInt();
         int K = in.nextInt();
+        System.out.print();
 
         if(K > N){
             System.out.println(plus(K, N));
