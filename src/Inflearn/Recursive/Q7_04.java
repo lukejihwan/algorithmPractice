@@ -7,5 +7,6 @@ public class Q7_04 {
         Scanner in = new Scanner(System.in);
         int N = in.nextInt();
         int M = in.nextInt();
+        int[] array = new int[N];
     }
 }
