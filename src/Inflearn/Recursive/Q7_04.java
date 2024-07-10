@@ -8,5 +8,9 @@ public class Q7_04 {
         int N = in.nextInt();
         int M = in.nextInt();
         int[] array = new int[N];
+
+        for(int i = 0; i < N; i++){
+
+        }
     }
 }
