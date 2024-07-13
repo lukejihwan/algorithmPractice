@@ -6,6 +6,10 @@ public class Q7_04 {
     private static int[] fibo;
 
     private static int DFS(int n){
+        // 피보나치의 가장 효율적인 방법은 for문을 사용하는 것이다
+        // 재귀함수는 stack 프레임을 사용하기 때문에 메모리 측면으로 보았을 때 좋은 방법은 아니다.
+        // 어쨋거나 이 문제의 핵심은 "재귀함수를 호출할 때 static 배열을 사용해 수가 할당된
+        // 배열은 또 계산할 필요없이 배열에서 꺼내 쓴다" 이다.
         if(fibo[n] > 0) return fibo[n];
         if(n == 1){
             return fibo[n] = 1;
