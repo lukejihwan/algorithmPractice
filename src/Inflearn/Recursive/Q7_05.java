@@ -7,5 +7,7 @@ public class Q7_05 {
         Scanner in = new Scanner(System.in);
         int N = in.nextInt();
         int M = in.nextInt();
+
+        for(int i = 0; i < N; i++){}
     }
 }
