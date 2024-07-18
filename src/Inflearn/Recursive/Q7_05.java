@@ -8,6 +8,8 @@ public class Q7_05 {
         int N = in.nextInt();
         int M = in.nextInt();
 
-        for(int i = 0; i < N; i++){}
+        for(int i = 0; i < N; i++){
+            System.out.print();
+        }
     }
 }
