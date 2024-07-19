@@ -9,7 +9,7 @@ public class Q7_05 {
         int M = in.nextInt();
 
         for(int i = 0; i < N; i++){
-            System.out.print();
+            System.out.print(i);
         }
     }
 }
