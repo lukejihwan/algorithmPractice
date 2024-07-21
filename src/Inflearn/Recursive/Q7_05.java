@@ -3,7 +3,10 @@ package Inflearn.Recursive;
 import java.util.Scanner;
 
 public class Q7_05 {
-    private static int solution1(){
+    private static int solution1(int N){
+        if(N == 0){
+            return N;
+        }
 
         return 0;
     }
