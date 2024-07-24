@@ -6,9 +6,9 @@ public class Q7_05 {
     private static int solution1(int N){
         if(N == 0){
             return N;
-        }else{}
-
-        return 0;
+        }else{
+            return N * N;
+        }
     }
 
     public static void main(String[] args) {
