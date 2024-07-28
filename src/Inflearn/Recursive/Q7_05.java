@@ -7,9 +7,10 @@ public class Q7_05 {
     private static int solution2(int N){
         if(N != 0){
             return N * N * N;
+        }else{
+            return 10 * 10 * 10;
         }
         return 10;
-        return 0;
     }
     private static int solution1(int N){
         if(N == 0){
