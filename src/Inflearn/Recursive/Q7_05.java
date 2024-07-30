@@ -10,8 +10,6 @@ public class Q7_05 {
         }else{
             return 10 * 10 * 10;
         }
-        return 10;
-        return 100;
     }
     private static int solution1(int N){
         if(N == 0){
