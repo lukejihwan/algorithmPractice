@@ -4,6 +4,12 @@ public class Q7_05 {
     Node root;
     public void DFS(Node root){
 
+        if(root == null)return;
+        else{
+            DFS(root.lt);
+            System.out.print(root.data + " ");
+            DFS(root.rt);
+        }
     }
 
     public static void main(String[] args) {
