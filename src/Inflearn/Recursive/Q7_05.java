@@ -3,8 +3,10 @@ package Inflearn.Recursive;
 import java.util.Scanner;
 
 public class Q7_05 {
+    int data;
 
     private static int solution2(int N){
+        
         if(N != 0){
             return N * N * N;
         }else{
