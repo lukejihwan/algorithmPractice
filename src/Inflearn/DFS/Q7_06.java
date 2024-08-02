@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Q7_06 {
     static int n;
     static int[] ch;
+    static int[] str;
 
     public static void DFS(int N){
         if(N == n + 1) {
