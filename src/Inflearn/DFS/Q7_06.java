@@ -32,7 +32,6 @@ public class Q7_06 {
 
 class Nodes{
     int data;
-
-
+    Node lt, rt;
 
 }
