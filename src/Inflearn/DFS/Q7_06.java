@@ -25,6 +25,7 @@ public class Q7_06 {
         Scanner in = new Scanner(System.in);
 
         int N = in.nextInt();
+        int M = in.nextInt();
 
         DFS(N);
     }
