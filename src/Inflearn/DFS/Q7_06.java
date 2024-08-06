@@ -26,6 +26,7 @@ public class Q7_06 {
 
         int N = in.nextInt();
         int M = in.nextInt();
+        int K = in.nextInt();
 
         DFS(N);
     }
