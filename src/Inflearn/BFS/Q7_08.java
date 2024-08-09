@@ -20,7 +20,7 @@ public class Q7_08 {
                 if(pol.rt != null) Q.offer(pol.rt);
             }
             level++;
-            System.out.println();
+            System.out.println(level);
         }
     }
     public static void main(String[] args) {
