@@ -38,7 +38,7 @@ public class Q7_08 {
 
 class Node{
     int data;
-    Node lt, rt, ct, bt, ht;
+    Node lt, rt;
     public Node(int data){
         this.data = data;
     }
