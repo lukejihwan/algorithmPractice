@@ -9,7 +9,7 @@ public class Q7_05 {
         
         if(N != 0){
             return N * N * N;
-        }else{ㅇㅓㅇ
+        }else{
             return 10 * 10 * 10;
         }
     }
@@ -19,6 +19,7 @@ public class Q7_05 {
         }else{
             return N * N;
         }
+        return 0;
     }
 
     public static void main(String[] args) {
