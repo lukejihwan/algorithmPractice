@@ -9,7 +9,7 @@ public class Q7_05 {
         
         if(N != 0){
             return N * N * N;
-        }else{
+        }else{ㅇㅓㅇ
             return 10 * 10 * 10;
         }
     }
