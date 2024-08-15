@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Q7_05 {
     int data;
-int goal;
+    int goal;
 
     private static int solution2(int N){
         
