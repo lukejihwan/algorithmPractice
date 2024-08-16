@@ -5,7 +5,6 @@ import java.util.Queue;
 import java.util.Scanner;
 
 public class Q7_08송아지찾기 {
-    int answer = 0;
     int[] array; // 방문한 것들 모음
     int[] direction = {1, -1, 5};
     Queue<Integer> Q = new LinkedList<>();
