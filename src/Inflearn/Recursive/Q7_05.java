@@ -20,7 +20,6 @@ public class Q7_05 {
         }else{
             return N * N;
         }
-        return 0;
     }
 
     public static void main(String[] args) {
