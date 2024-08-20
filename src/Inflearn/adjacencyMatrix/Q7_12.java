@@ -14,6 +14,7 @@ public class Q7_12 {
 
         // 인접행렬의 크기를 지정
         graph = new int[n + 1][n + 1];
+        ch = new int[n + 1];
 
         // 그래프에 맞게 인접행렬에 표시
         for(int i = 0; i < m; i++){
@@ -24,15 +25,22 @@ public class Q7_12 {
 
         ch[1] = 1;
         main.DFS(1);
+        System.out.println(answer);
     }
 
-    public int DFS(int v){
+    public void DFS(int v){
         if(v == n){
             answer++;
         }else{
-
+            // 현재 노드에서 접근할 수 있는 노드를 탐색
+            for(int i = 1; i <= n; i++){
+                if(graph[v][i] == 1 && ch[i] == 0){
+                    ch[i] = 1;
+                    DFS(i);
+                    ch[i] = 0;
+                }
+            }
         }
-
     }
 
 }
