@@ -1,4 +1,4 @@
-package Inflearn.adjacencyMatrix;
+package Inflearn.AdjacencyMatrix;
 
 import java.util.Scanner;
 
