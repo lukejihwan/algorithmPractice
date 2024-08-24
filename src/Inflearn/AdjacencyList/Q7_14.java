@@ -16,12 +16,14 @@ public class Q7_14 {
         q.offer(n);
         int level = 0;
         while (!q.isEmpty()){
+            level++;
             for(int i = 0; i < q.size(); i++){
                 int cur = q.poll();
-                for(int j = 1; j <= ch.length; j++){
+                for(int j = 1; j < ch.length; j++){
                     if(graph[cur][j] == 1 && ch[j] == 0){
-                        System.out.println(j + " : " + ++level);
+                        System.out.println(j + " : " + level);
                         ch[j] = 1;
+                        q.offer(j);
 
                     }
 
