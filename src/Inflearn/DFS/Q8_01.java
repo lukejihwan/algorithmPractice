@@ -3,18 +3,21 @@ package Inflearn.DFS;
 import java.util.Scanner;
 
 public class Q8_01 {
-    static int n, total;
+    static int n, total = 0;
     static String answer = "NO";
     static int[] arr;
+    static boolean flag = false;
 
-    public static String DFS(int L, int sum, boolean flag){
+    public void DFS(int L, int sum, int[] arr){
         if(n == L){
             if((total - sum) == sum){
-                return answer = "YES";
+                answer = "YES";
+                flag = true;
+                return;
             }
         }else{
-            DFS(L + 1, sum + arr[L], true);
-            DFS(L + 1, sum + arr[L], false);
+            DFS(L + 1, sum + arr[L], arr);
+            DFS(L + 1, sum, arr);
         }
 
     }
@@ -27,7 +30,7 @@ public class Q8_01 {
             arr[i] = in.nextInt();
             total += arr[i];
         }
-d
-        DFS(0, 0, true);
+        main.DFS(0, 0, arr);
+        System.out.println(answer);
     }
 }
