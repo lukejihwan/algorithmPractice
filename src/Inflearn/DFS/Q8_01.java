@@ -27,7 +27,7 @@ public class Q8_01 {
             arr[i] = in.nextInt();
             total += arr[i];
         }
-
+d
         DFS(0, 0, true);
     }
 }
