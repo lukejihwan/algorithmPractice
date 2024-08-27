@@ -9,6 +9,8 @@ public class Q8_01 {
     static boolean flag = false;
 
     public void DFS(int L, int sum, int[] arr){
+        if(flag)return;
+        if(sum>total/2)return;
         if(n == L){
             if((total - sum) == sum){
                 answer = "YES";
