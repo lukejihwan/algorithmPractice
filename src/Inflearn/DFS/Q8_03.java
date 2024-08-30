@@ -9,6 +9,7 @@ public class Q8_03 {
         int m = in.nextInt();
         int[] arr = new int[n];
         for(int i = 0; i < n; i++){
+            arr[i] = in.nextInt();
         }
     }
 }
