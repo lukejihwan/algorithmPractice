@@ -7,11 +7,10 @@ public class Q8_03 {
     static int[] scores, times;
 
     private void DFS(int sum, int L, int timeSum){
-        if(L == n) return;
-        if(answer < sum && timeSum <= m){
-            answer = sum;
-        }
-        if(timeSum < m){
+        if(timeSum > m)return;
+        if(L == n){
+            answer = Math.max(answer, sum);
+        }else{
             DFS(sum + scores[L], L + 1, timeSum + times[L]);
             DFS(sum, L + 1, timeSum);
         }
