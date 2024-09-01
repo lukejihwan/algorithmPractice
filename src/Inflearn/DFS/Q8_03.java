@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Q8_03 {
     static int m, n, answer, timeSum;
-    static int[] scores, times;
+    static int[] scores, times, names;
 
     private void DFS(int sum, int L, int timeSum){
         if(timeSum > m)return;
