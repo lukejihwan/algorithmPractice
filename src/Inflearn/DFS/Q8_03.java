@@ -13,7 +13,7 @@ public class Q8_03 {
             answer = Math.max(answer, sum);
         }else{
             DFS(sum + scores[L], L + 1, timeSum + times[L]);
-            DFS(sum, L + 1, timeSum);
+            DFS(sum, L + 1, timeSum);d
         }
 
     }
