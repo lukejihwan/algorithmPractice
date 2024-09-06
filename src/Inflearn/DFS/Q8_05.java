@@ -7,5 +7,6 @@ public class Q8_05 {
         Scanner in = new Scanner(System.in);
         int N = in.nextInt();
         int M = in.nextInt();
+        int Z = in.nextInt();
     }
 }
