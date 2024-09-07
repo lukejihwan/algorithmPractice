@@ -8,5 +8,9 @@ public class Q8_05 {
         int N = in.nextInt();
         int M = in.nextInt();
         int Z = in.nextInt();
+
+        for(int i = 0; i < N; i++){
+
+        }
     }
 }
