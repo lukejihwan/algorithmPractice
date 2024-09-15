@@ -13,5 +13,6 @@ public class Q8_07 {
         int n = in.nextInt();
         int m = in.nextInt();
         main.DFS(n, m);
+        System.out.println();
     }
 }
