@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Q8_07 {
 
     private void DFS(int n, int m){
-
+        n * m;
     }
     public static void main(String[] args) {
         Q8_07 main = new Q8_07();
