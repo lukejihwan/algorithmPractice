@@ -3,20 +3,14 @@ package Inflearn.DFS;
 import java.util.Scanner;
 
 public class Q8_07 {
-    static int answer;
     static int[][] hint;
 
-    private void DFS(int n, int m){
-        if(hint[n][m] != 0){
-            answer += hint[n][m];
-            return;
-        }
+    private int DFS(int n, int m){
+        if(hint[n][m] != 0) return hint[n][m];
         if(m == 0 || n == m){
-            answer++;
-            return;
+            return 1;
         }else{
-            DFS(n - 1, m - 1);
-            DFS(n - 1, m);
+            return hint[n][m] = DFS(n - 1, m - 1) + DFS(n - 1, m);
         }
     }
     public static void main(String[] args) {
@@ -25,7 +19,6 @@ public class Q8_07 {
         int n = in.nextInt();
         int m = in.nextInt();
         hint = new int[n + 1][m + 1];
-        main.DFS(n, m);
-        System.out.println(answer);
+        System.out.println(main.DFS(n, m));
     }
 }
