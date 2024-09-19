@@ -6,16 +6,14 @@ public class Q8_09 {
     static int[] answer;
     static int n, m;
 
-    private void DFS(int L, int num){
+    private void DFS(int L, int start){
         if(L == m){
             for(int x : answer)System.out.print(x + " ");
             System.out.println();
         }else{
-            for(int i = 1; i <= n; i++){
-                if(num < i){
-                    answer[L] = i;
-                    DFS(L + 1, i);
-                }
+            for(int i = start; i <= n; i++){
+                answer[L] = i;
+                DFS(L + 1, i + 1);
             }
         }
     }
@@ -25,6 +23,6 @@ public class Q8_09 {
         n = in.nextInt();
         m = in.nextInt();
         answer = new int[m];
-        main.DFS(0, 0);
+        main.DFS(0, 1);
     }
 }
