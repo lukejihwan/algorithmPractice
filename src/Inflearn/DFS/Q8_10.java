@@ -12,11 +12,11 @@ public class Q8_10 {
             answer++;
         }else{
             for(int i = 0; i < dir.length; i++){
-                int nextL = x + dir[i][0];
-                int nextR = y + dir[i][1];
-                if(nextL <= 7 && nextR <= 7 && nextL >= 1 && nextR >= 1 && map[nextL][nextR] == 0){
+                int nextX = x + dir[i][0];
+                int nextY = y + dir[i][1];
+                if(nextX <= 7 && nextY <= 7 && nextX >= 1 && nextY >= 1 && map[nextX][nextY] == 0){
                     map[x][y] = 1;
-                    DFS(x + dir[i][0], y + dir[i][1]);
+                    DFS(nextX, nextY);
                     map[x][y] = 0;
                 }
             }
