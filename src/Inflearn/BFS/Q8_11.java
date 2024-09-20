@@ -50,15 +50,17 @@ public class Q8_11 {
 
     }
 
-}
+    private class Point{
+        int level, x, y;
+        public Point(int level, int x, int y){
+            this.level = level;
+            this.x = x;
+            this.y = y;
+        }
 
-class Point{
-    int level, x, y;
-    public Point(int level, int x, int y){
-        this.level = level;
-        this.x = x;
-        this.y = y;
+
     }
 
-
 }
+
+
