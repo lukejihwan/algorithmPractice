@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Q8_13 {
 
-    private void BFS(int m){
+    private void BFS(int m, int n){
 
     }
     public static void main(String[] args) {
