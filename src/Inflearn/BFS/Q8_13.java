@@ -6,6 +6,7 @@ public class Q8_13 {
 
     private void BFS(int m, int n){
         Queue Q = new LinkedList<>();
+        Q.poll();
 
     }
     public static void main(String[] args) {
