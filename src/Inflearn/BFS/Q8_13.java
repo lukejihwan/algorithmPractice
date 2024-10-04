@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Q8_13 {
     static int[] dx = {-1, -1, 0, 1, 1, 1, 0, -1};
     static int[] dy = {0, -1, -1, -1, 0, 1, 1, 1};
-    static int answer, m;
+    static int answer, m, n;
 
     private void DFS(int x, int y, int[][] board){
         for(int i = 0; i < 8; i++){
