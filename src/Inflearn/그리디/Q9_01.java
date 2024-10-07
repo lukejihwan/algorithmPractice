@@ -1,13 +1,22 @@
 package Inflearn.그리디;
 
 import java.util.ArrayList;
-import java.util.Comparator;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Q9_01 {
 
     private int solution(ArrayList<Point> arr, int n){
         int cnt = 0;
+
+        Collections.sort(arr);
+        int max = Integer.MIN_VALUE;
+        for(Point ob : arr){
+            if(ob.y > max){
+                cnt++;
+                max = ob.y;
+            }
+        }
 
 
         return cnt;
