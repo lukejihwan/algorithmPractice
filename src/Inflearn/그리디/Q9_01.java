@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Q9_01 {
+    static int n;
 
     private int solution(ArrayList<Point> arr, int n){
         int cnt = 0;
