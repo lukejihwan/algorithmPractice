@@ -2,7 +2,7 @@ package Inflearn.그리디;
 
 public class Q9_03_2 {
     public static void main(String[] args) {
-        Q9
+
     }
 }
 
