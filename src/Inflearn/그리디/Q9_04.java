@@ -7,22 +7,29 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class Q9_04 {
+    static int n;
 
     private int greed(ArrayList<Point4> list){
         PriorityQueue<Integer> pQ = new PriorityQueue(Collections.reverseOrder());
 
-        for(Point4 a : list){
-            System.out.println(a.m + " " + a.d);
+        int max = Integer.MIN_VALUE;
+        int answer = 0;
+        int j = 0;
+        for(int i = max; i >= 1; i--){
+            for( ; j < n; j++){
+                if(list.get(j).d < i) break;
+                pQ.offer(list.get(j).m);
+
+            }
+            if(!pQ.isEmpty()) answer += pQ.poll();
         }
 
-
-
-        return 0;
+        return answer;
     }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         Q9_04 main = new Q9_04();
-        int n = in.nextInt();
+        n = in.nextInt();
         ArrayList<Point4> list = new ArrayList<>();
         for(int i = 0; i < n; i++){
             int m = in.nextInt();
@@ -32,7 +39,7 @@ public class Q9_04 {
 
         Collections.sort(list);
 
-        main.greed(list);
+        System.out.println(main.greed(list));
 
     }
 }
@@ -47,10 +54,10 @@ class Point4 implements Comparable<Point4>{
 
     @Override
     public int compareTo(Point4 o) {
-        if(this.m == o.m){
-            return this.d - o.d;
+        if(this.d == o.d){
+            return o.m - this.m;
         }else{
-            return this.m - o.m;
+            return o.d - this.d;
         }
     }
 }
