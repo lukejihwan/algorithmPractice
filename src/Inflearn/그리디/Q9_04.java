@@ -13,7 +13,7 @@ public class Q9_04 {
         PriorityQueue<Integer> pQ = new PriorityQueue(Collections.reverseOrder());
 
         int answer = 0;
-        int j = 0;
+        int j = 0; // 이쪽으로 뺀 이유는 list에서 중복된 값을 불러오면 안되기 때문
         for(int i = max; i >= 1; i--){
             for( ; j < n; j++){
                 if(list.get(j).d < i) break;
