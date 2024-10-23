@@ -7,12 +7,11 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class Q9_04 {
-    static int n;
+    static int n, max = Integer.MIN_VALUE;
 
     private int greed(ArrayList<Point4> list){
         PriorityQueue<Integer> pQ = new PriorityQueue(Collections.reverseOrder());
 
-        int max = Integer.MIN_VALUE;
         int answer = 0;
         int j = 0;
         for(int i = max; i >= 1; i--){
@@ -35,6 +34,7 @@ public class Q9_04 {
             int m = in.nextInt();
             int d = in.nextInt();
             list.add(new Point4(m, d));
+            if(d > max) max = d;
         }
 
         Collections.sort(list);
