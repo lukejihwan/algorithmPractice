@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class Q9_04 {
     static int n, max = Integer.MIN_VALUE;
+    static String sf;
 
     private int greed(ArrayList<Point4> list){
         PriorityQueue<Integer> pQ = new PriorityQueue(Collections.reverseOrder());
