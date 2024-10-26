@@ -46,7 +46,7 @@ public class Q9_04 {
 }
 
 class Point4 implements Comparable<Point4>{
-    int m;
+    int m, h, i, s;
     int d;
     Point4(int m, int d){
         this.m = m;
