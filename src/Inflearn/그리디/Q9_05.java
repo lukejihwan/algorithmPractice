@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class Q9_05 {
-    static int m, n;
+    static int m, n, z;
     static ArrayList<ArrayList<Edge>> graph;
     static int[] dis;
     public void solution(int v){
