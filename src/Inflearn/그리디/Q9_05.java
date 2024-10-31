@@ -10,6 +10,7 @@ public class Q9_05 {
     static int m, n, z;
     static ArrayList<ArrayList<Edge>> graph;
     static int[] dis;
+    static double[] d;
     static float f;
     public void solution(int v){
         PriorityQueue<Edge> pQ = new PriorityQueue<Edge>();
