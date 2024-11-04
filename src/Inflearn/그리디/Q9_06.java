@@ -6,11 +6,15 @@ public class Q9_06 {
     static int[] unf;
 
     public static int Find(int v){
+        if(v == unf[v]) return v;
+        else return unf[v] = Find(unf[v]);
 
     }
 
     public static void Union(int a, int b){
-
+        int aF = Find(a);
+        int bF = Find(b);
+        if(aF != bF) unf[aF] = bF;
     }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -26,6 +30,9 @@ public class Q9_06 {
         int a = in.nextInt();
         int b = in.nextInt();
         int fa = Find(a);
+        int fb = Find(b);
+        if(fa == fb) System.out.println("YES");
+        else System.out.println("NO");
 
     }
 }
