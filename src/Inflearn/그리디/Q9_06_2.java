@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Q9_06_2 {
     static int[] unf;
+    static float[] unff;
 
     public static int Find(int v){
         if(unf[v] == v){
