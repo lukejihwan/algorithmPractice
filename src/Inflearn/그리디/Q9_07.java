@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Q9_07 {
     static int[] unf;
-    static float[] d;
+    static float[] d, f, a;
 
     public static int Find(int v){
         if(unf[v] == v){
