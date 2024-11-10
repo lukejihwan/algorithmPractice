@@ -5,6 +5,7 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 
 public class Q9_07_3 {
+    static int d;
     // Priority Queue로 푸는 방법
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
