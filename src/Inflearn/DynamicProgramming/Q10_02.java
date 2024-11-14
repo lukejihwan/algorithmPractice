@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Q10_02 {
     static int[] arr;
+    static int a, d;
 
     private int solution(int n){
         arr[1] = 1;
