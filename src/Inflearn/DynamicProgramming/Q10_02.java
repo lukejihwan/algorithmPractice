@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Q10_02 {
     static int[] arr;
     static int a, d;
+    static float c, f;
 
     private int solution(int n){
         arr[1] = 1;
