@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Q10_03 {
     static int d;
+    static float[] f;
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
