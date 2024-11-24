@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Q10_03 {
     static int d;
     static float[] f;
-    static bool flag;
+    static boolean flag;
 
     private static int solution(int[] arr){
 
