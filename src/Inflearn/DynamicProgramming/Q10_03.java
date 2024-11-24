@@ -22,6 +22,5 @@ public class Q10_03 {
 
         System.out.println(solution(arr));
 
-
     }
 }
