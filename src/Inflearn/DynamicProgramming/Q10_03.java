@@ -1,5 +1,7 @@
 package Inflearn.DynamicProgramming;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class Q10_03 {
@@ -20,6 +22,8 @@ public class Q10_03 {
         for(int i = 0; i < n; i++){
             arr[i] = in.nextInt();
         }
+
+        Collections.sort();
 
         System.out.println(solution(arr));
 
