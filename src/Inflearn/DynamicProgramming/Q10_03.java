@@ -23,7 +23,11 @@ public class Q10_03 {
             arr[i] = in.nextInt();
         }
 
-        Collections.sort();
+        int[] array = new int[n + 1];
+        for(int i = 1; i < array.length; i++){
+            array[i] = in.nextInt();
+        }
+
 
         System.out.println(solution(arr));
 
