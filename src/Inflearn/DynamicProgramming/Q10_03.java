@@ -8,6 +8,7 @@ public class Q10_03 {
     static int d;
     static float[] f;
     static boolean flag;
+    static boolean j;
 
     private static int solution(int[] arr){
 
