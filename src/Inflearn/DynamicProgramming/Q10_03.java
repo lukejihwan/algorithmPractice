@@ -14,15 +14,17 @@ public class Q10_03 {
 
         return 0;
     }
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int[] arr = new int[n];
-        int a;
 
-        for(int i = 0; i < n; i++){
-            arr[i] = in.nextInt();
-        }
+
+        public static void main(String[] args) {
+            Scanner in = new Scanner(System.in);
+            int n = in.nextInt();
+            int[] arr = new int[n];
+            int a;
+
+            for(int i = 0; i < n; i++){
+                arr[i] = in.nextInt();
+            }
 
         int[] array = new int[n + 1];
         for(int i = 1; i < array.length; i++){
