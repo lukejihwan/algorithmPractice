@@ -10,7 +10,7 @@ public class Q10_03 {
     static float[] f;
     static boolean flag;
     static boolean j, k;
-    static double n;
+    static double n,z;
 
     private static int solution(int[] arr){
         int answer = 0;
