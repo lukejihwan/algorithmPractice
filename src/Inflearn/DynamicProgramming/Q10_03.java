@@ -5,12 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Q10_03 {
-    static int d;
     static int[] dy;
-    static float[] f;
-    static boolean flag;
-    static boolean j, k;
-    static double n,z;
 
     private static int solution(int[] arr){
         int answer = 0;
@@ -32,6 +27,7 @@ public class Q10_03 {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         int[] arr = new int[n];
+        // dy라는 배열에 해당 index의 최대 수열 길이를 적어 놓는다.
 
         for(int i = 0; i < n; i++){
             arr[i] = in.nextInt();
