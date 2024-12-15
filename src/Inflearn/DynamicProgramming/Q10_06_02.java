@@ -16,6 +16,7 @@ public class Q10_06_02 {
             }
         }
         System.out.println(dy[m]);
+        System.out.println();
 
     }
 }
