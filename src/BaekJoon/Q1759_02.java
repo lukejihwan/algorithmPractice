@@ -41,13 +41,15 @@ public class Q1759_02 {
             if(vowelEa >= 1 && (l - vowelEa) >= 2){
                 System.out.println(answer);
             }
+        }else{
+            for(int i = start; i < c; i++){
+                System.out.println(i + " 여기");
+                visited[i] = true;
+                DFS(i + 1, level + 1);
+                visited[i] = false;
+            }
         }
 
-        for(int i = start; i < c; i++){
-            visited[i] = true;
-            DFS(i + 1, level + 1);
-            visited[i] = false;
-        }
 
     }
 }
