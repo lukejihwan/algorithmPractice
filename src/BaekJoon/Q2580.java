@@ -25,23 +25,26 @@ public class Q2580 {
 
         solution();
 
-
-
     }
 
     public static void solution(){
 
-        for(int i = 1; i <= map.length; i++){
-            for(int j = 1; j <= map.length; j++){
-                int num = map[i][j];
-                if(num == 0){
-                    DFS(i, j);
+        int count = 0;
+        do{
+            count = 0;
+            for(int i = 1; i <= 9; i++){
+                for(int j = 1; j <= 9; j++){
+                    int num = map[i][j];
+                    if(num == 0){
+                        count++;
+                        DFS(i, j);
+                    }
                 }
             }
-        }
+        } while (count > 0);
 
-        for(int i = 0; i < map.length; i++){
-            for(int j = 0; j < map.length; j++){
+        for(int i = 1; i <= 9; i++){
+            for(int j = 1; j <= 9; j++){
                 System.out.print(map[i][j] + " ");
             }
             System.out.println();
@@ -50,11 +53,10 @@ public class Q2580 {
     }
 
     public static void DFS(int y, int x){
-        System.out.println(y + " " + x);
         // 세로에서 구할 수 있는지 체크한다.
         boolean[] visited = new boolean[10];
         int count1 = 0;
-        for(int i = 1; i <= map.length; i++){
+        for(int i = 1; i <= 9; i++){
             if(map[i][x] != 0){
                 visited[map[i][x]] = true;
             }else{
@@ -62,17 +64,17 @@ public class Q2580 {
             }
         }
         if(count1 == 1){
-            for(int i = 1; i <= map.length; i++){
+            for(int i = 1; i <= 9; i++){
                 if(!visited[i]){
                     map[y][x] = i;
                 }
             }
+            return;
         }
 
-        // 가로에서 구할 수 있는지 체크한다.
         visited = new boolean[10];
         int count2 = 0;
-        for(int i = 1; i <= map.length; i++){
+        for(int i = 1; i <= 9; i++){
             if(map[y][i] != 0){
                 visited[map[y][i]] = true;
             }else{
@@ -80,18 +82,21 @@ public class Q2580 {
             }
         }
         if(count2 == 1){
-            for(int i = 1; i <= map.length; i++){
+            for(int i = 1; i <= 9; i++){
                 if(!visited[i]){
                     map[y][x] = i;
                 }
             }
+            return;
         }
 
         // 9칸에서 구할 수 있는지 체크한다.
         visited = new boolean[10];
         int count3 = 0;
-        for(int i = y / 3; i < 3; i++){
-            for(int j = x / 3; j < 3; j++){
+        int startY = returnRange(y);
+        int startX = returnRange(x);
+        for(int i = startY; i < startY + 3; i++){
+            for(int j = startX; j < startX + 3; j++){
                 if(map[i][j] != 0){
                     visited[map[i][j]] = true;
                 }else{
@@ -100,12 +105,22 @@ public class Q2580 {
             }
         }
         if(count3 == 1){
-            for(int i = 1; i <= map.length; i++){
+            for(int i = 1; i <= 9; i++){
                 if(!visited[i]){
                     map[y][x] = i;
                 }
             }
         }
 
+    }
+
+    public static int returnRange(int num){
+        if(num >= 1 && num <= 3){
+            return 1;
+        } else if (num >= 4 && num <= 6) {
+            return 4;
+        } else {
+            return 7;
+        }
     }
 }
