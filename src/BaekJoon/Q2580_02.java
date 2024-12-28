@@ -44,6 +44,7 @@ public class Q2580_02 {
             map[y][x] = 0;
             return;
         }
+        System.out.println();
 
         solution(y, x + 1);
     }
