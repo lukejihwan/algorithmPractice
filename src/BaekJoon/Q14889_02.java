@@ -55,4 +55,8 @@ public class Q14889_02 {
         int diff = Math.abs(teamStart - teamLink);
         minDiff = Math.min(minDiff, diff);
     }
+
+    static int minus(){
+        return 0;
+    }
 }
