@@ -59,4 +59,7 @@ public class Q14889_02 {
     static int minus(){
         return 0;
     }
+    static int plus(){
+        return 0;
+    }
 }
