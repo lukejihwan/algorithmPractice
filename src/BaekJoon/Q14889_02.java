@@ -66,4 +66,7 @@ public class Q14889_02 {
     static int multiple(){
         return 0;
     }
+    static int divide(){
+        return 0;
+    }
 }
