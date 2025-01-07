@@ -39,6 +39,21 @@ public class Q14889_02 {
         }
     }
 
+    static void divideTeamsBytwo(int idx, int count) {
+        if (count == N / 2) {
+            calculateDiff();
+            return;
+        }
+
+        for (int i = idx; i < N; i++) {
+            if (!visited[i]) {
+                visited[i] = true;
+                divideTeams(i + 1, count + 1);
+                visited[i] = false;
+            }
+        }
+    }
+
     static void calculateDiff() {
         int teamStart = 0, teamLink = 0;
 
