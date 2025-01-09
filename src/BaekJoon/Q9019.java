@@ -12,6 +12,8 @@ public class Q9019 {
             numbers[n][1] = in.nextInt();
         }
 
+        int m = in.nextInt();
+
 
     }
 }
