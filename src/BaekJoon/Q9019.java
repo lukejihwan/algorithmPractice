@@ -13,6 +13,7 @@ public class Q9019 {
         }
 
         int m = in.nextInt();
+        int x = in.nextInt();
 
 
     }
