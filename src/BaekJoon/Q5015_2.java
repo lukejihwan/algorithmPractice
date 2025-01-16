@@ -35,7 +35,7 @@ public class Q5015_2 {
                 return;
             }
 
-            System.out.println("최소갯수: " + move[num]);
+            System.out.println(num + ": " + move[num]);
             int unext = num + u;
             if(unext >= 1 && unext <= f && !visited[unext]){
                 q.add(unext);
@@ -49,6 +49,7 @@ public class Q5015_2 {
                 visited[dnext] = true;
                 move[dnext] = move[num] + 1;
             }
+            System.out.println("use elevator");
         }
 
         System.out.println("use the stairs");
