@@ -62,6 +62,7 @@ public class Q15684 {
                 x++;
             }
             if (y != i) return false;
+            System.out.println(y == i);
         }
         return true;
     }
