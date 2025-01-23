@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Q10_06 {
     static int[] answers;
     static int m;
+    static int a,r;
 
     public static int solution(Question[] arr){
 
