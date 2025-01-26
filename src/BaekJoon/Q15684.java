@@ -66,4 +66,18 @@ public class Q15684 {
         }
         return true;
     }
+
+    private static boolean isNotChecked() {
+        for (int i = 1; i <= n; i++) {
+            int x = 1, y = i;
+            for (int j = 0; j < h; j++) {
+                if (map[x][y] == 1) y++;
+                else if (map[x][y] == 2) y--;
+                x++;
+            }
+            if (y != i) return false;
+            System.out.println(y == i);
+        }
+        return true;
+    }
 }
