@@ -33,6 +33,18 @@ public class Q9506 {
                 bw.write(n + " is NOT perfect." + "\n");
             }
 
+            if(sum == n){
+                bw.write(n + " = " );
+                for(int i = 0; i < list.size(); i++){
+                    bw.write(list.get(i) + "");
+                    if(i != list.size() - 1) bw.write(" + ");
+                }
+                bw.write("\n");
+            }else{
+                bw.write(n + " is NOT perfect." + "\n");
+            }
+
+
         }
 
         br.close();
