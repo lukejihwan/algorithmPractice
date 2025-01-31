@@ -43,6 +43,9 @@ public class Q9506 {
             }else{
                 bw.write(n + " is NOT perfect." + "\n");
             }
+            if(sum != n){
+                System.out.print(sum);
+            }
 
 
         }
