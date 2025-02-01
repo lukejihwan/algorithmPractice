@@ -69,4 +69,29 @@ public class Q1018_ver2 {
 
         min = Math.min(min, count);
     }
+
+    public static void finds(int x, int y) {
+        int end_x = x + 8;
+        int end_y = y + 8;
+        int count = 0;
+
+        boolean TF = arr[x][y];	// 첫 번째 칸의 색
+
+        for (int i = x; i < end_x; i++) {
+            for (int j = y; j < end_y; j++) {
+
+                if (arr[i][j] != TF) {
+                    count++;
+                }
+
+                TF = (!TF);
+            }
+
+            TF = !TF;
+        }
+
+        count = Math.min(count, 64 - count);
+
+        min = Math.min(min, count);
+    }
 }
