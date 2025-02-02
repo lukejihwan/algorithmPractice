@@ -73,6 +73,30 @@ public class Q2580_02 {
         return true;
     }
 
+    public static boolean validationWithoutX(int y, int x, int value){
+        for(int i = 0; i < 9; i++){
+            if(map[y][i] == value){
+                return false;
+            }
+            if(map[i][x] == value){
+                return false;
+            }
+        }
+
+        int startX = x/3 * 3;
+        int startY = y/3 * 3;
+
+        for(int i = startY; i < startY + 3; i++){
+            for(int j = startX; j < startX + 3; j++){
+                if(map[i][j] == value){
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
     public static void print(){
         for(int i = 0; i < 9; i++){
             for(int j = 0; j < 9; j++){
