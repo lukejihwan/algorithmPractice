@@ -13,9 +13,6 @@ public class Q1018 {
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
 
-        //배열에 모두 담는다.
-        System.out.print();
-
 
     }
 }
