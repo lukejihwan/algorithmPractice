@@ -17,7 +17,7 @@ public class Q5014 {
 
         dir = new int[2];
         dir[0] = in.nextInt();
-        dir[1] = in.nextInt();
+        dir[1] = -in.nextInt();
 
         // 숫자가 커질것이라고 예상되면 dfs보단 bfs선택
         bfs(init);
