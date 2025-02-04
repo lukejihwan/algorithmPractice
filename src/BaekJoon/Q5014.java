@@ -55,7 +55,6 @@ public class Q5014 {
 
         }
 
-
         System.out.println("use the stairs");
     }
 }
