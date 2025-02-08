@@ -7,5 +7,8 @@ public class Q15684_2 {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         int m = in.nextInt();
+        int s = in.nextInt();
+        int h = in.nextInt();
+
     }
 }
