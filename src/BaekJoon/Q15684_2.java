@@ -55,4 +55,8 @@ public class Q15684_2 {
     {
         return false;
     }
+    public static boolean isNotPossibleOfGood()
+    {
+        return false;
+    }
 }
