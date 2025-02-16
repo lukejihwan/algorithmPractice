@@ -26,6 +26,7 @@ public class Q5086 {
                 bw.write("neither" + "\n");
             }else{
                 bw.write("either");
+                return;
             }
         }
 
