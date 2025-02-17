@@ -24,6 +24,9 @@ public class Q5086 {
                 bw.write("multiple" + "\n");
             }else if(first % second != 0 && second % first != 0){
                 bw.write("neither" + "\n");
+            }else{
+                bw.write("either");
+                return;
             }
         }
 
