@@ -49,18 +49,10 @@ public class Q15684_2 {
 
     public static boolean isPossible()
     {
+        if(n == min){
+            return false;
+        }
         return true;
     }
-    public static boolean isNotPossible()
-    {
-        return false;
-    }
-    public static boolean isNotPossibleOfGood()
-    {
-        return false;
-    }
-    public static boolean isNotPossibleOfBad()
-    {
-        return false;
-    }
+
 }
