@@ -55,4 +55,12 @@ public class Q15684_2 {
         return true;
     }
 
+    public static boolean isNotPossible()
+    {
+        if(n == min && h == n){
+            return false;
+        }
+        return true;
+    }
+
 }
