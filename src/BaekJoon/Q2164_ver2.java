@@ -16,6 +16,7 @@ public class Q2164_ver2 {
 
         while(myQueue.size()>1){
             myQueue.poll();
+            if(myQueue.isEmpty()){return;}
             myQueue.add(myQueue.poll());
         }
         System.out.println(myQueue.poll());
