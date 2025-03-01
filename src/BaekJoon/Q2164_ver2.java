@@ -21,4 +21,6 @@ public class Q2164_ver2 {
         }
         System.out.println(myQueue.poll());
     }
+
+    public static solution(){}
 }
