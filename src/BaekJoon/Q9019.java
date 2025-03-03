@@ -58,6 +58,8 @@ public class Q9019 {
                     visited[R] = true;
                     command[R] = command[now] + "R";
                 }
+
+                if(visited[L]){}
             }
             System.out.println(command[goal]);
 
