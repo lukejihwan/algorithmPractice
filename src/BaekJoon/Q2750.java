@@ -28,6 +28,7 @@ public class Q2750 {
     }
 
     private static int[] sort(int[] arr){
+        int a = arr[0];
 
         for(int i = 0; i < arr.length; i++){
             int index = i;
